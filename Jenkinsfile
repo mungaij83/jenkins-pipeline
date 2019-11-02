@@ -3,7 +3,6 @@ pipeline {
         docker {
             image 'python:3.5.1'
             registryUrl 'dr.sqilab.com:25000'
-            registryCredentialId ''
         }
     }
     stages {
