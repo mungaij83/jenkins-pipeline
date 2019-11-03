@@ -2,7 +2,6 @@ pipeline {
     agent { 
         docker {
             image 'python:3.5.1'
-            registryUrl 'dr.sqilab.com:25000'
         }
     }
     stages {
@@ -32,7 +31,7 @@ pipeline {
             echo 'Successful build'
         }
         failure{
-            echo 'Clean failed build'
+            echo 'Bild failed'
         }
     }
 }
