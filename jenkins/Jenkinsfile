@@ -31,7 +31,7 @@ pipeline {
             echo 'Successful build'
         }
         failure{
-            echo 'Bild failed'
+            echo 'Build failed'
         }
     }
 }
