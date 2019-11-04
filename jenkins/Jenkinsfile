@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Build image'){
             steps{
-                docker.build registry+'jmungai/flask-example:$BUILD_NUMBER'
+                script{
+                    docker.build registry+'jmungai/flask-example:$BUILD_NUMBER'
+                }
             }
         }
         stage('Test'){
