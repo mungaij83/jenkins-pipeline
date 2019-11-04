@@ -1,13 +1,10 @@
 pipeline {
-    agent { 
-        docker {
-            dockerfile true
-        }
-    }
+    registry 'http://dr.sqilab.com:25000/'
+    agent none
     stages {
-        stage('build'){
+        stage('Build image'){
             steps{
-                sh 'python version'
+                docker.build registry+'jmungai/flask-example:$BUILD_NUMBER'
             }
         }
         stage('Test'){
